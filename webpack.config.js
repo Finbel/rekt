@@ -7,13 +7,23 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: ['babel-loader', 'awesome-typescript-loader', 'eslint-loader'],
+        loader: ['babel-loader', 'eslint-loader'],
       },
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/,
+      },
+      { test: /\.js$/, loader: 'source-map-loader', enforce: 'pre' },
     ],
   },
   devServer: {
