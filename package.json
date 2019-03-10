@@ -5,7 +5,8 @@
   "author": "Patrick O'Regan <p.oregan.87@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -21,6 +22,7 @@
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.16.4",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
   }
 }
