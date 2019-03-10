@@ -1,1 +1,1 @@
-console.log("hey");
+console.log('hey'); // eslint-disable-line no-console
